@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="searchCity">Search City:</label>
+                <input type="text" class="form-control" id="searchCity" name="city" placeholder="Enter city name" aria-label="Search City">
+                <ul id="citySuggestions" class="list-group" style="display: none;"></ul>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <div id="weather" style="display: none;">
+            <img src="" alt="" id="icon">
+            <h2 id="degrees" class="text-secondary font-weight-bold text-center">28&#8451;</h2>
+            <div class="text-center">
+                <h1 id="city" class="text-success">Stockholm</h1>
+                <button id="change" class="btn btn-primary border rounded">Change City</button>
+            </div>
+            <div class="info mx-auto text-center"> <!-- Updated class to center-align -->
+                <div class="d-flex justify-content-center"> <!-- Updated class to center-align -->
+                    <div class="mx-4">
+                        <h3>Wind</h3>
+                        <div class="font-weight-bold" id="windValue">2<span class="small text-muted"> km/h</span></div>
+                    </div>
+                    <div class="mx-5">
+                        <h3>Feels like</h3>
+                        <div class="font-weight-bold" id="feelsLikeValue">2<span class="small text-muted"> &#8451;</span></div>
+                    </div>
+                    <div class="mx-4">
+                        <h3>Humidity</h3>
+                        <div class="font-weight-bold" id="humidityValue">2<span class="small text-muted"> %</span></div>
+                    </div>
+                </div>
+            </div>
+            <ul></ul>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="weather.js"></script>
+</body>
+</html>
